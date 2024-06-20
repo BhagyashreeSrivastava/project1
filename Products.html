@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+        integrity="sha512-Fo3rlrZj/k7ujTnHg4C+sFvJEhN/6lD9G+tIT6WZ6lz1qljyP4urQy4M1q7+8f6Ug5uS7d8DdtsqjL6lDe/iug=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        body {
+            background-color: #000;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            background-color: orange;
+            padding: 20px 10px;
+            display: flex;
+            align-items: center;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav {
+            margin-left: auto;
+        }
+
+        nav a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: white;
+            font-family: Arial, sans-serif;
+        }
+
+        nav a:hover {
+            background-color: rgb(4, 121, 163);
+            padding: 20px;
+            border-radius: 10px;
+            text-decoration: rgb(23, 141, 141);
+            border-bottom: 5px solid rgb(24, 112, 138);
+        }
+
+        .logo {
+            height: 90px;
+            vertical-align: middle;
+            margin-right: 10px;
+        }
+
+        .nav-item {
+            display: inline-block;
+            text-decoration: none;
+            color: white;
+            font-size: 24px;
+        }
+
+        .nav-item .logo-text {
+            color: white;
+            font-size: 30px;
+            margin-left: 10px;
+        }
+
+        .header {
+            background-image: url('https://4kwallpapers.com/images/walls/thumbs_2t/10974.jpg');
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            padding: 100px 60px;
+            text-align: center;
+            color: white;
+            margin-top: 100px;
+            margin-bottom: 0px;
+
+            padding-bottom: 40px; /* Add padding to increase space */
+        }
+
+        .header h1 {
+            font-size: 50px;
+            margin: 0;
+        }
+
+        .products {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 20px;
+            gap: 50px; /* Add gap between product cards */
+        }
+
+        .flip-card {
+            background-color: transparent;
+            width: 500px;
+            height: 400px;
+            perspective: 1000px;
+            margin: 20px;
+        }
+
+        .flip-card-inner {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            text-align: center;
+            transition: transform 0.6s;
+            transform-style: preserve-3d;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+        }
+
+        .flip-card:hover .flip-card-inner {
+            transform: rotateY(180deg);
+        }
+
+        .flip-card-front, .flip-card-back {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            backface-visibility: hidden;
+            border-radius: 20px;
+        }
+
+        .flip-card-front {
+            background-color:rgb(240, 61, 130);
+            color: white;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .flip-card-front img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+
+        .flip-card-front h3 {
+            margin: 15px 0;
+        }
+
+        .flip-card-back {
+            background-color: #2980b9;
+            color: white;
+            transform: rotateY(180deg);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .vertical-nav {
+            background-color: #02021f;
+            padding: 20px;
+            border-radius: 0px;
+            width: 98%;
+            margin-top: 20px;
+        }
+
+        .vertical-nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .vertical-nav ul li {
+            margin: 10px 0;
+        }
+
+        .vertical-nav ul li a {
+            color: white;
+            text-decoration: wavy;
+            font-size: 18px;
+            display: block;
+            padding: 20px;
+            border-radius: 5px;
+            background-color: rgb(31, 32, 102);
+        }
+
+        .vertical-nav ul li a:hover {
+            background-color: rgb(27, 80, 178);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <a href="#" class="nav-item">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQIvmt-mkZW7wnOwdCt11irAQx1E_KbUrpxq17GwSKS1R13cK48Zr0P4zp9lr07fD5igTc&usqp=CAU"
+                alt="Logo" class="logo">
+            <span class="logo-text">PRODUCTS</span>
+        </a>
+        <nav>
+            <a href="About.html">About Us</a>
+            <a href="Company.html">Company</a>
+            <a href="Contact Us.html">Contact Us</a>
+            <a href="Trust Wallet.html">Back to Home</a>
+        </nav>
+    </div>
+
+    <div class="header">
+        <h1>Our Products</h1>
+        <p>Discover the range of products we offer</p>
+    
+
+    <div class="products">
+        <div class="flip-card">
+            <div class="flip-card-inner">
+                <div class="flip-card-front">
+                    <img src="https://public.bnbstatic.com/image/cms/blog/20220215/56e2ce27-0276-408f-ad55-2fe85ad0cb68.png" alt="BNB Smart Chain (BNB)">
+                    <h3>BNB Smart Chain (BNB)</h3>
+                </div>
+                <div class="flip-card-back">
+                    <h3>BNB Smart Chain (BNB)</h3>
+                    <p>BNB Smart Chain supports EVM-compatible smart contracts and protocols, facilitating cross-chain transfers and other communications. The native token, BNB, is used for smart contract execution and staking. There is no inflation of the BNB token, which means that validators do not earn a block reward.</p>
+                   <p>1 BNB = ₹50,313.31</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="flip-card">
+            <div class="flip-card-inner">
+                <div class="flip-card-front">
+                    <img src="https://thumbor.forbes.com/thumbor/fit-in/900x510/https://www.forbes.com/advisor/in/wp-content/uploads/2022/10/pexels-alesia-kozik-6765363-scaled.jpg" alt="Bitcoin (BTC)">
+                    <h3>Bitcoin (BTC)</h3>
+                </div>
+                <div class="flip-card-back">
+                    <h3>Bitcoin (BTC)</h3>
+                    <p>Bitcoin is a digital currency which operates free of any central control or the oversight of banks or governments. Instead it relies on peer-to-peer software and cryptography.</p>
+                    <p>1 BTC = ₹5425397.50</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="flip-card">
+            <div class="flip-card-inner">
+                <div class="flip-card-front">
+                    <img src="https://crypto-economy.com//wp-content/uploads/2023/12/ATOM-Cosmos-Price-Analysis-1024x576.jpg" alt="Cosmos (ATOM)">
+                    <h3>Cosmos (ATOM)</h3>
+                </div>
+                <div class="flip-card-back">
+                    <h3>Cosmos (ATOM)</h3>
+                    <p>Cosmos (ATOM) is a blockchain platform focused on interoperability between different blockchain networks. Its goal is to create an ecosystem where blockchain protocols can collaborate and communicate without conflicts.</p>
+                <p>1 ATOM = ₹659.99</p>
+                </div>
+            </div>
+        </div>
+        <div class="flip-card">
+            <div class="flip-card-inner">
+                <div class="flip-card-front">
+                    <img src="https://businessjournalonline.com/wp-content/uploads/2023/10/Ethereum-Price-Forecast.webp" alt="Ethereum (ETH)">
+                    <h3>Ethereum (ETH)</h3>
+                </div>
+                <div class="flip-card-back">
+                    <h3>Ethereum (ETH)</h3>
+                    <p>Ethereum is a decentralized blockchain platform that establishes a peer-to-peer network that securely executes and verifies application code, called smart contracts. Smart contracts allow participants to transact with each other without a trusted central authority.</p>
+                    <p>1 ETH = ₹2,96,681.77</p>
+                </div>
+            </div>
+        </div>
+        <div class="flip-card">
+            <div class="flip-card-inner">
+                <div class="flip-card-front">
+                    <img src="https://www.cryptotimes.io/wp-content/uploads/2024/02/Polkadot-Considers-Burning-Coretime-Revenues-to-Benefit-DOT-Holders.jpg" alt="Polkadot (DOT)">
+                    <h3>Polkadot (DOT)</h3>
+                </div>
+                <div class="flip-card-back">
+                    <h3>Polkadot (DOT)</h3>
+                    <p>Polkadot is a protocol that connects blockchains — allowing value and data to be sent across previously incompatible networks (Bitcoin and Ethereum, for example). It's also designed to be fast and scalable. The DOT token is used for staking and governance; it can be bought or sold on Coinbase and other exchanges.</p>
+                    <p>1 DOT = ₹498.13</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <div class="vertical-nav">
+        <ul>
+            <li><a href="Products.html">Products</a></li>
+            <li><a href="About.html">About Us</a></li>
+            <li><a href="Company.html">Company</a></li>
+            <li><a href="Contact Us.html">Contact Us</a></li>
+            <li><a href="Trust Wallet.html">Back to Home</a></li>
+        </ul>
+    </div>
+</body>
+
+</html>

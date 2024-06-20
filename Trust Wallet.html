@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document1</title>
+    <link href="About.html" rel="stylesheet">
+
+    <style>
+        body {
+            background-color: #2e1137;
+            /* Set the background color to black */
+            margin: 0;
+            /* Remove default margin */
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            background-color: #2e1137;
+            /* Background color for the container */
+            padding: 20px 10px;
+            /* Padding inside the container */
+            border-radius: 0px;
+            /* Rounded corners */
+            display: flex;
+            /* Flexbox layout for horizontal alignment */
+            align-items: center;
+            /* Center items vertically */
+            margin-bottom: 0;
+            /* Remove margin at the bottom */
+            position: fixed;
+            /* Fixes the container at the top */
+            width: 100%;
+            /* Ensures the container spans the full width */
+            top: 0;
+            /* Positions the container at the top */
+            z-index: 1000;
+            /* Ensures the container is on top of other elements */
+        }
+
+        nav {
+            text-align: left;
+            /* Center the navigation links */
+            margin-left: auto;
+            /* Push the navigation to the right */
+        }
+
+        nav a {
+            margin: 0 15px;
+            /* Add space between the links */
+            text-decoration: wavy;
+            color: white;
+            font-family: Arial, sans-serif;
+        }
+
+        nav a:hover {
+            background-color: rgb(88, 14, 122);
+            padding: 20px;
+            border-radius: 10px;
+            text-decoration: rgb(23, 141, 141);
+            border-bottom: 5px solid rgb(41, 2, 53);
+        }
+
+        .main-title {
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 50px;
+            color: rgb(15, 3, 55);
+            text-align: center;
+            margin: 0;
+            /* Remove default margin */
+            background-image: url('https://t3.ftcdn.net/jpg/06/17/88/90/360_F_617889061_ZO5zsPTfTmxTfcMG8spbnPHf4wfJMGLY.jpg');
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            padding: 22%;
+            /* Add padding to make the background image more visible */
+            border-radius: 0px;
+            /* Rounded corners */
+            margin-bottom: 0;
+            /* Remove margin at the bottom */
+            margin-top: 8%;
+            /* Adds margin to the top to avoid overlap */
+        }
+
+        .logo {
+            height: 90px;
+            vertical-align: middle;
+            /* Align the logo vertically with the text */
+            margin-right: 10px;
+        }
+
+        .img-container {
+            text-align: center;
+            background-color: #2e1137;
+            padding: 20px;
+            margin-top: 4%;
+            margin-bottom: 3%;
+        }
+
+        .img-container img {
+            max-width: 70%;
+            height: auto;
+            border-radius: 20px;
+        }
+
+        .img-container2 {
+            text-align: center;
+            background-color: #2e1137;
+            padding: 20px;
+            margin-top: 4%;
+            margin-bottom: 3%;
+        }
+
+        .img-container2 img {
+            /* max-width: 100%;*/
+            height: 50%;
+            border-radius: 20px;
+            width: 40%;
+        }
+
+        .img-container2 video {
+            width: 70%;
+            height: auto;
+            border-radius: 20px;
+        }
+
+        .download-button {
+            color: blue;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-size: larger;
+            font-style: italic;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 20px;
+        }
+
+        .download-button button {
+            padding: 25px 50px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            font-size: 22px;
+            transition: background-color 0.3s ease;
+        }
+
+        .download-button button:hover {
+            background-color: #45a049;
+        }
+
+        .nav-item {
+            display: inline-block;
+            /* Ensure inline elements have margin applied */
+            text-decoration: none;
+            /* Remove underline */
+            color: white;
+            font-size: 24px;
+        }
+
+        .nav-item .logo-text {
+            color: white;
+            font-size: 30px;
+            /* Increase font size */
+            margin-left: 10px;
+            /* Add some margin to the left of the logo */
+        }
+
+        .nav-item:first-child {
+            margin-right: 40%;
+            /* Add space between the logo text and the next link */
+        }
+
+        /* box containing 15 photos with the ability for the user to scroll left or right */
+        .photo-box {
+            display: flex;
+            overflow-x: auto;
+            /* Enable horizontal scrolling */
+            white-space: nowrap;
+            /* Prevent wrapping of photos */
+            padding: 10px;
+            margin-left: 40px;
+            margin-right: 40px;
+            border: 2px solid #ccc;
+            border-radius: 10px;
+            margin-top: 60px;
+            margin-bottom: 40px;
+        }
+
+        .photo {
+            flex: 0 0 auto; /* Ensure the photos don't shrink */
+            width: 19%; /* Set a fixed width for the photos */
+            height:27%; /* Set a fixed height for the photos */
+            margin-left: 10px;
+            margin-right: 10px;
+            border-radius: 5px;
+            overflow: hidden;
+        }
+
+        .photo img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* Styles for the vertical navigation */
+        .vertical-nav {
+            background-color: #2e1137;
+            padding: 20px;
+            border-radius: 0px;
+            width: 98%;
+        }
+
+        .vertical-nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .vertical-nav ul li {
+            margin: 10px 0;
+        }
+
+        .vertical-nav ul li a {
+            color: white;
+            text-decoration: wavy;
+            font-size: 18px;
+            display: block;
+            padding: 20px;
+            border-radius: 5px;
+            background-color: rgb(88, 14, 122);
+        }
+
+        .vertical-nav ul li a:hover {
+            background-color: rgb(41, 2, 53);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+
+        <a href="#" class="nav-item">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQIvmt-mkZW7wnOwdCt11irAQx1E_KbUrpxq17GwSKS1R13cK48Zr0P4zp9lr07fD5igTc&usqp=CAU"
+                alt="Logo" class="logo">
+            <span class="logo-text">TRUST WALLET</span>
+        </a>
+        <nav>
+            <a href="About.html">About Us</a>
+            <a href="Products.html">Products</a>
+            <a href="Company.html">Company</a>
+            <a href="Contact Us.html">Contact Us</a>
+        </nav>
+    </div>
+    <h1 class="main-title">TRUST WALLET</h1>
+
+    <div class="img-container">
+        <img src="https://i0.wp.com/www.alphr.com/wp-content/uploads/2021/11/Trust-Wallet-How-to-Find-Wallet-Address.jpg?fit=1204%2C739&ssl=1"
+            alt="Trust Wallet Image">
+    </div>
+    <div class="img-container2">
+        <img src="https://lh5.googleusercontent.com/proxy/g9Fga9NNTLMZtCMgosq9qbVBfveiMpxweqY6ujmAiLFsKmK04NFXwr4Bxp7MnPmvpoDQIWFC4zisDdVcKcWvEhhfhn3yGCITjxtSJ8BlsBxwmPyQqQ"
+            alt="Trust Wallet Image">
+    </div>
+
+    <div class="img-container2">
+        <video
+            src="//www.google.com/imgres?q=home%20page%20for%20trust%20wallet%20image%20in%20jpg&imgurl=https%3A%2F%2Fi.ytimg.com%2Fvi%2FcKdPVuOkPSQ%2Fmaxresdefault.jpg&imgrefurl=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DcKdPVuOkPSQ&docid=omjGcW5qZdVupM&tbnid=kUcYmwaA9od42M&vet=12ahUKEwjr2827w-iGAxXfd2wGHeMbCCQQM3oECFkQAA..i&w=1280&h=720&hcb=2&ved=2ahUKEwjr2827w-iGAxXfd2wGHeMbCCQQM3oECFkQAA"
+            controls></video>
+    </div>
+    <div class="img-container2">
+        <img src="https://public.bnbstatic.com/image/cms/blog/20220815/c32ce453-46e9-4058-b681-38eb4dab9c11">
+    </div>
+
+    <!-- Add a button or hyperlink for the download link -->
+    <div class="download-button">
+        <a href="https://play.google.com/store/apps/details?id=com.wallet.crypto.trustapp" target="_blank">
+            <button>Download Now</button>
+        </a>
+    </div>
+
+
+
+
+    <div class="photo-box">
+        <div class="photo">
+            <img src="https://play-lh.googleusercontent.com/guRQPfPkMLrn0Ih_w_NoIs9iNZut_epfDmmwXa6A52ZTV-lCYR3gf1Qb6XmcPJPIuSk=w2560-h1440-rw" alt="Photo 1">
+        </div>
+        <div class="photo">
+            <img src="https://play-lh.googleusercontent.com/n8lec8DRcldHAdFWCVxo3pMdrO1u3yUXQ8N-KWweViFp0tHYmrcsZi7egvSDMMB5PQw=w2560-h1440-rw" alt="Photo 2">
+        </div>
+        <!-- Add more photo divs for a total of 15 photos -->
+        <!-- Example: -->
+        <div class="photo">
+            <img src="https://play-lh.googleusercontent.com/g6Lq19sk5AAnlkp9fSrQeoy1qLqaafCgyeON_NcunuMC-ZEoxCV_2x35mLR8NoEXaVM=w2560-h1440-rw" alt="Photo 3">
+        </div>
+        <div class="photo">
+            <img src="https://play-lh.googleusercontent.com/zmt_esmgh2sMTZGxSnFOpWJ9Nrt4mMXcMjeLNZrQkfdn48bf9rVp_tEVt59IQMrGOPA=w2560-h1440-rw" alt="Photo 4">
+        </div>
+        <div class="photo">
+            <img src="https://play-lh.googleusercontent.com/hJLVAXPSJPUXWPtO_FXbuUfSJ4PjQUesKuEh7_JQ4V_65-6WtJJ5XxYjnLYld29m1Q=w2560-h1440-rw" alt="Photo 5">
+        </div>
+        <div class="photo">
+            <img src="https://play-lh.googleusercontent.com/CYsE_u_ik4mtsk8kAecejAluWY2AnIobNBu-eCJdi2UnMsPr91oC8Cavs3qp1WrfDcU=w2560-h1440-rw" alt="Photo 6">
+        </div>
+        <div class="photo">
+            <img src="https://play-lh.googleusercontent.com/klElSxjYd_J3cw7549ltnCZ8MWaPdJBkjLpGU4GdeWpvNE3h6TkSuBNMA4W671fSphI=w2560-h1440-rw" alt="Photo 7">
+        </div>
+        <div class="photo">
+            <img src="https://play-lh.googleusercontent.com/0OXgo4uClHbdhcZPgy_nJIKNCWSaPZP_gVqv7fOCVZ_xXgVhIGw_Mzc1fUy3Uvd5dA=w2560-h1440-rw" alt="Photo 8">
+        </div>
+    </div>
+
+    <div class="vertical-nav">
+        <ul>
+            <li><a href="Trust Wallet.html">Home</a></li>
+            <li><a href="About.html">About Us</a></li>
+            <li><a href="Products.html">Products</a></li>
+            <li><a href="Company.html">Company</a></li>
+            <li><a href="Contact Us.html">Contact Us</a></li>
+        </ul>
+    </div>
+</body>
+
+</html>
